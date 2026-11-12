@@ -1,0 +1,5 @@
+{
+  "role": "viewer",
+  "action": "write",
+  "path": "/public/dashboard"
+}

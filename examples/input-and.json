@@ -1,0 +1,10 @@
+{
+  "user": {
+    "name": "alice",
+    "status": "active",
+    "role": "admin"
+  },
+  "method": "GET",
+  "path": "/api/v1/resource",
+  "locked": false
+}

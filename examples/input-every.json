@@ -1,0 +1,23 @@
+{
+  "containers": [
+    {
+      "name": "web",
+      "image": "registry.internal.example.com/apps/web:v1.2.0",
+      "security_context": {
+        "read_only_root_filesystem": true
+      }
+    },
+    {
+      "name": "proxy",
+      "image": "registry.internal.example.com/infra/sidecar:v2.0.1",
+      "security_context": {
+        "read_only_root_filesystem": true
+      }
+    }
+  ],
+  "labels": {
+    "company.com/team": "platform",
+    "company.com/environment": "production"
+  },
+  "exemptions": []
+}

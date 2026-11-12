@@ -1,0 +1,6 @@
+{
+  "user": "alice",
+  "action": "read",
+  "roles": ["developer", "viewer"],
+  "maintenance": false
+}

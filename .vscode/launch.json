@@ -1,0 +1,90 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug OPA eval (prebuild)",
+      "type": "go",
+      "request": "launch",
+      "mode": "exec",
+      "debugAdapter": "dlv-dap",
+      "program": "${workspaceFolder}/opa-debug",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "eval",
+        "--data",
+        "examples/policy.rego",
+        "--input",
+        "examples/input.json",
+        "data.authz.allow"
+      ]
+    },
+   {
+      "name": "Debug OPA eval policy_not (prebuild)",
+      "type": "go",
+      "request": "launch",
+      "mode": "exec",
+      "debugAdapter": "dlv-dap",
+      "program": "${workspaceFolder}/opa-debug",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "eval",
+        "--data",
+        "examples/policy-not.rego",
+        "--input",
+        "examples/input-not.json",
+        "data.policy_not.allow"
+      ]
+    },
+   {
+      "name": "Debug OPA eval policy_every (prebuild)",
+      "type": "go",
+      "request": "launch",
+      "mode": "exec",
+      "debugAdapter": "dlv-dap",
+      "program": "${workspaceFolder}/opa-debug",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "eval",
+        "--data",
+        "examples/policy-every.rego",
+        "--input",
+        "examples/input-every.json",
+        "data.policy_every.allow"
+      ]
+    },
+    {
+      "name": "Debug OPA eval policy_and (prebuild)",
+      "type": "go",
+      "request": "launch",
+      "mode": "exec",
+      "debugAdapter": "dlv-dap",
+      "program": "${workspaceFolder}/opa-debug",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "eval",
+        "--data",
+        "examples/policy-and.rego",
+        "--input",
+        "examples/input-and.json",
+        "data.policy_and.allow"
+      ]
+    },
+    {
+      "name": "Debug OPA eval (build & run)",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "debugAdapter": "dlv-dap",
+      "program": "${workspaceFolder}/cmd/opa",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "eval",
+        "--data",
+        "examples/policy.rego",
+        "--input",
+        "examples/input.json",
+        "data.authz.allow"
+      ]
+    }
+  ]
+}

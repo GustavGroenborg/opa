@@ -1,0 +1,11 @@
+{
+  "user": {
+  "name": "alice",
+  "age": 17
+  },
+  "role": "viewer",
+  "roles": ["viewer", "auditor"],
+  "action": "  READ  ",
+  "path": "/public/dashboard"
+}
+
